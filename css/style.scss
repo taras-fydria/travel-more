@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600');
+
+
+
+
+@font-face {
+	font-family: 'aleoregular';
+	src: url(../fonts/aleo-regular-webfont-webfont.woff2) format('woff2'),
+		url(../fonts/aleo-regular-webfont-webfont.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+$base-font-family: 'Josefin Sans',
+sans-serif;
+$second-font-family:'aleoregular';
+
+body {
+	font-family: $base-font-family;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #ffffff;
+	padding: 15px;
+
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0 0 10px;
+}
+
+/* Layout */
+.ba-container {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1150px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button {
+	color: #fff;
+	text-decoration: none;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button {
+	display: inline-block;
+	font-family: 'aleoregular';
+	background-color: #5474fd;
+	width: 225px;
+	height: 60px;
+	text-align: center;
+	line-height: 1;
+	padding-top: 23px;
+	text-transform: uppercase;
+	margin-top: 33px;
+	letter-spacing: 1.3px;
+
+	&:hover {
+		background-color: #fff;
+		color: #5474fd;
+	}
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover {}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {}
+
+textarea {}
+
+svg {
+	fill: currentColor;
+}
+
+.fas.fa-quote-left {
+	position: relative;
+	text-outline: 0;
+	left: 0;
+	margin-right: 10px;
+	position: relative;
+	top: -14px;
+	color: #5474fd;
+
+}
+
+.ba-hero {
+	text-align: center;
+	background: url(../img/hero.jpeg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	padding-top: 265px;
+	position: relative;
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 48px;
+		line-height: 1;
+		font-weight: 600;
+		letter-spacing: 3px;
+		margin-bottom: 0px;
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		font-weight: 300;
+		letter-spacing: 6px;
+		margin-bottom: 37px;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		// border: 2px #ffffff solid;
+		&--input {
+			border: 2px solid #fff;
+			background-color: #fff;
+			height: 45px;
+			width: 469px;
+			color: #333333;
+			text-align: center;
+			padding: 5px 15px;
+
+			-webkit-input-placeholder {
+				text-align: center;
+				line-height: 1;
+			}
+		}
+
+		&--button {
+			background-color: #5474fd;
+			width: 146px;
+			height: 59px;
+			border: 2px solid #fff;
+			margin: 0;
+			padding-top: 0;
+
+			&:hover {
+				border-color: #5474fd;
+			}
+		}
+	}
+
+	&__scroll {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 300;
+		font-family: $base-font-family;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		bottom: 40px;
+		left: calc(50% - 46px);
+		align-items: center;
+
+		span {
+			letter-spacing: 2px;
+			margin-bottom: 7px;
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+.ba-nav {
+	background-color: #5474fd;
+	padding: 12px 0;
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 1px;
+	}
+
+	&__menu {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__items+&__items {
+		margin-left: 42px;
+	}
+
+	&__items a {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: normal;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+	}
+}
+
+.ba-why {
+	background: url(../img/whychosse.jpeg) no-repeat;
+	background-size: cover;
+	padding: 119px 0 110px;
+
+	&__title {
+		font-size: 36px;
+		font-weight: 400;
+		font-family: 'aleoregular';
+		margin-bottom: 49px;
+	}
+
+	&__left {
+		padding-top: 71px;
+
+		p+p {
+			margin-top: 29px;
+		}
+	}
+
+	&__right {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__img--firft {
+		padding-left: 63px;
+	}
+
+	&__img--second {
+		padding-left: 188px;
+	}
+}
+
+.ba-enigma {
+	background: #333333;
+	padding: 80px 0 120px;
+
+	&__col {
+		text-align: center;
+
+		&:first-child {
+			color: #5474fd;
+		}
+
+		&:nth-child(2) {
+			color: #ff6363;
+		}
+
+		&:nth-child(3) {
+			color: #00a2ff;
+
+		}
+	}
+
+	&__text {
+		font-family: $second-font-family;
+		color: #e8e8e8;
+		font-size: 36px;
+		font-weight: 300;
+	}
+}
+
+.ba-spain-left {
+	background: url(../img/spainBG1.jpeg) no-repeat;
+	background-size: cover;
+	padding: 230px 0 100px;
+
+	&__row {
+		justify-content: flex-start;
+	}
+
+	&__col {
+		background: rgba(35, 35, 35, 0.9);
+		padding: 47px 30px;
+		width: calc(50% - 30px);
+		margin-left: 30px;
+	}
+
+	&__location {
+		font-family: $base-font-family;
+		color: #e8e8e8;
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		font-family: $base-font-family;
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+}
+
+.ba-spain-right {
+	background: url(../img/spainBG2.jpeg) no-repeat;
+	background-size: cover;
+	padding: 230px 0 100px;
+
+	&__row {
+		justify-content: flex-end;
+	}
+
+	&__col {
+		background: rgba(35, 35, 35, 0.9);
+		padding: 50px 30px;
+		width: calc(50% - 30px);
+
+	}
+
+	&__location {
+		font-family: $base-font-family;
+		color: #e8e8e8;
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		font-family: $base-font-family;
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+}
+
+.ba-testimonials {
+	padding: 120px 0 200px;
+	background: url(../img/whatourBG.jpeg) no-repeat;
+	background-size: cover;
+
+	&__title {
+		text-align: center;
+		font-family: $second-font-family;
+		font-size: 36px;
+		font-weight: 300;
+		line-height: 1;
+		margin-bottom: 94px;
+		letter-spacing: 0.5px;
+		position: relative;
+	}
+
+	&__row {
+		flex-wrap: nowrap;
+	}
+
+	&__col {
+		background-color: #333333;
+		padding: 50px 50px 50px 60px;
+		flex-grow: 1;
+	}
+
+	&__name {
+		font-family: $base-font-family;
+		color: #fefefe;
+		font-size: 20px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		text-align: justify;
+	}
+}
+
+.ba-footer {
+	background-color: #232323;
+	text-align: center;
+	padding: 120px 0 54px;
+
+	&__slogan {
+		letter-spacing: 1px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.ba-socials {
+		i+i {
+			margin-left: 19px;
+		}
+		i:hover{
+			opacity: 0.5;
+			cursor: pointer;
+		}
+		i:nth-child(3){
+			color:  #5474fd;
+		}
+	}
+}

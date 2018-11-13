@@ -131,6 +131,9 @@ svg {
 		font-weight: 600;
 		letter-spacing: 3px;
 		margin-bottom: 0px;
+		@media screen and(max-width:400px) {
+			font-size: 35px;
+		}		
 	}
 
 	&__subtitle {
@@ -221,6 +224,10 @@ svg {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		@media screen and(max-width:768px) {
+			display: none;
+		}
+
 	}
 
 	&__items+&__items {
@@ -231,6 +238,9 @@ svg {
 		text-transform: uppercase;
 		font-size: 14px;
 		font-weight: normal;
+		@media screen and(max-width:800px) {
+			font-size: 13px;
+		}
 
 		&:hover {
 			text-decoration: underline;
@@ -244,6 +254,12 @@ svg {
 	background-size: cover;
 	padding: 119px 0 110px;
 
+	.ba-row {
+		@media screen and(max-width: 640px) {
+			display: block;
+		}
+	}
+
 	&__title {
 		font-size: 36px;
 		font-weight: 400;
@@ -254,6 +270,16 @@ svg {
 	&__left {
 		padding-top: 71px;
 
+
+		@media screen and(max-width: 768px) {
+			padding-top: 0;
+		}
+
+		@media screen and (max-width:640px) {
+			width: 100%;
+			padding: 0 15px 20px;
+		}
+
 		p+p {
 			margin-top: 29px;
 		}
@@ -263,14 +289,41 @@ svg {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+
+		@media screen and (max-width: 640px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0 auto;
+			padding: 10px 15px 0;
+			flex-direction: row;
+		}
 	}
 
 	&__img--firft {
 		padding-left: 63px;
+
+		@media screen and (max-width: 1180px) {
+			padding-left: 0px;
+			margin: 0px auto;
+		}
+
+		@media screen and (max-width:640px) {
+			max-width: 50%;
+		}
 	}
 
 	&__img--second {
 		padding-left: 188px;
+
+		@media screen and (max-width: 1180px) {
+			padding-left: 0px;
+			margin: 0 auto;
+		}
+
+		@media screen and (max-width:640px) {
+			max-width: 50%;
+		}
 	}
 }
 
@@ -300,6 +353,12 @@ svg {
 		color: #e8e8e8;
 		font-size: 36px;
 		font-weight: 300;
+		@media screen and(max-width:780px) {
+			font-size: 25px;
+		}
+		@media screen and(max-width:585px) {
+			font-size: 20px;
+		}
 	}
 }
 
@@ -310,6 +369,11 @@ svg {
 
 	&__row {
 		justify-content: flex-start;
+
+		@media screen and (max-width: 1000px) {
+			justify-content: center;
+			text-align: center;
+		}
 	}
 
 	&__col {
@@ -317,6 +381,15 @@ svg {
 		padding: 47px 30px;
 		width: calc(50% - 30px);
 		margin-left: 30px;
+
+		@media screen and (max-width: 900px) {
+			width: 75%;
+		}
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+		}
+
 	}
 
 	&__location {
@@ -345,12 +418,25 @@ svg {
 
 	&__row {
 		justify-content: flex-end;
+
+		@media screen and (max-width: 1000px) {
+			justify-content: center;
+			text-align: center;
+		}
 	}
 
 	&__col {
 		background: rgba(35, 35, 35, 0.9);
 		padding: 50px 30px;
 		width: calc(50% - 30px);
+
+		@media screen and (max-width: 900px) {
+			width: 75%;
+		}
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+		}
 
 	}
 
@@ -391,12 +477,32 @@ svg {
 
 	&__row {
 		flex-wrap: nowrap;
+
+		@media screen and (max-width: 1200px) {
+			justify-content: space-between;
+			// flex-wrap: wrap;
+			margin-left: auto;
+		}
+
+		@media screen and (max-width: 940px) {
+			flex-wrap: wrap;
+		}
+
+		img {
+			@media screen and (max-width: 940px) {
+				margin: 0 auto 20px;
+			}
+		}
 	}
 
 	&__col {
 		background-color: #333333;
 		padding: 50px 50px 50px 60px;
 		flex-grow: 1;
+
+		@media screen and (max-width: 1200px) {
+			flex-grow: 0;
+		}
 	}
 
 	&__name {
@@ -428,12 +534,14 @@ svg {
 		i+i {
 			margin-left: 19px;
 		}
-		i:hover{
+
+		i:hover {
 			opacity: 0.5;
 			cursor: pointer;
 		}
-		i:nth-child(3){
-			color:  #5474fd;
+
+		i:nth-child(3) {
+			color: #5474fd;
 		}
 	}
 }
